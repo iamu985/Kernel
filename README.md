@@ -9,5 +9,5 @@ Description : Educational (non-profit) project where we build a working kernel f
 4. Change to the branch you have created with this command `git checkout <new name>`
 5. Go to `./Kernel/` there will be a buildenv directory.
 6. Run the following command `docker build buildenv -t myos-buildenv`. It will take a few minutes to complete the build.
-7. After the build is complete run this command `docker run myos-buildenv echo "Hello from myos"`. This should echo back "Hello from myos" in the terminal which means the build environment is up and running.<br><br>
+7. After the build is complete run this command `docker run -it $pwd:/root/env myos-buildenv`. If your terminal changes to `~/env#` you are inside the docker container.
 *Note: The name `myos-buildenv` is optional you can give any name you want to the environment but make sure to not get confused.*
